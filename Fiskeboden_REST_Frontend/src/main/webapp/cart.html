@@ -1,0 +1,82 @@
+<!-- VERSION 99 -->
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiskeboden - Varukorg</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/cart.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/fiskebod_logo.png" alt="Fiskeboden Logotyp" />
+      </a>
+    </div>
+    <nav>
+      <a href="about.html">OM OSS</a>
+      <a href="products.html">PRODUKTER</a>
+<a href="cart.html" class="cart-link">
+  <img src="images/shoppingCart.png" class="cart-icon" />
+  VARUKORG
+  <span id="cart-count" class="cart-count">0</span>
+</a>
+
+
+
+
+    </nav>
+  </header>
+
+  <div class="wave-top">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+      <path d="M0.00,49.98 C150.00,150.00 349.77,-50.00 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
+        style="stroke: none; fill: #1e4770;"></path>
+    </svg>
+  </div>
+
+  <main class="cart-content">
+    <div class="cart-wrapper">
+      <h2>Din varukorg</h2>
+      <div id="cart-items"></div>
+      <div class="cart-buttons">
+        <button id="clear-cart">Töm varukorg</button>
+        <button id="checkout-btn">Slutför beställning</button>
+         <a href="products.html" id="back-to-products" class="secondary-btn" style="display: none;">
+  		<img src="images/backTo.png" alt="" class="icon-back" />
+  		Till produkterna
+		</a>
+
+      </div>
+    </div>
+
+    <section id="checkout-section" style="display: none; margin-top: 50px;">
+      <h3>Fyll i dina uppgifter</h3>
+      <form id="checkout-form" class="checkout-form">
+        <label for="customer-name">Namn:</label><br>
+        <input type="text" id="customer-name" required><br>
+        <button type="submit">Bekräfta beställning</button>
+      </form>
+      <div id="receipt" class="receipt" style="display: none; margin-top: 30px;"></div>
+    </section>
+  </main>
+
+  <div class="wave">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+      <path d="M0.00,49.98 C150.00,150.00 349.77,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+        style="stroke: none; fill: #1e4770;"></path>
+    </svg>
+  </div>
+
+<footer class="site-footer">
+  <p style="font-size: 0.8em;">© 2025 Surströmming Solutions</p>
+</footer>
+
+</body>
+</html>

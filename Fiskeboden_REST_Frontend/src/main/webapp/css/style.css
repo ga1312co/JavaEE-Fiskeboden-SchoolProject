@@ -1,0 +1,885 @@
+/* Grundinställningar */
+body {
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    background-color: #0d2d4a;
+    color: #fefefe;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #0a2340;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #fefefe;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #f7e7af; /* Guldfärg på hover */
+}
+
+/* Varukorgsknappen */
+.cart-link {
+    background-color: #c0392b;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cart-link:hover {
+    background-color: #e74c3c;
+    transform: scale(1.05);
+}
+
+.cart-icon {
+    height: 20px;
+    width: auto;
+}
+
+/* Hero-sektionen */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px 20px; 
+    background: linear-gradient(to bottom, #0d2d4a 0%, #1e4770 100%);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.hero-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.hero h2 {
+    font-size: 52px;
+    font-style: italic;
+    margin-bottom: 0px;
+    color: #f7e7af;
+    font-weight: normal;
+    line-height: 1.1;
+}
+
+.hero h1 {
+    font-size: 52px;
+    font-style: italic;
+    margin-top: -5px;
+    margin-bottom: 0px;
+    color: #ffffff;
+    font-weight: normal;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #cfd8dc;
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #c0392b;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #e74c3c;
+    transform: scale(1.05);
+}
+
+/* Hero Image */
+.hero-image img {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Vågeffekt under hero */
+.wave {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100%;
+}
+
+.wave-top {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg); /* SPEGLAR VÅGEN! */
+  }
+  
+  .wave-top svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100%;
+  }
+
+  /* Suppliers sektion */
+  .suppliers-section {
+    background: url('../images/paperTexture.png') center/cover no-repeat;
+    background-color: #f9f9f9; /* fallback om bilden inte laddas */
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+
+    text-align: center;
+    position: relative;
+    
+  }
+  
+  .suppliers-section h2,
+  .suppliers-section p {
+    color: #0d2d4a;
+    font-family: 'Merriweather', serif;
+  }
+  
+  .suppliers-section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .suppliers-section p {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .carousel-track-wrapper {
+    overflow: hidden;
+    width: 90%;
+  }
+  
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: max-content; 
+}
+
+  
+  .supplier-card {
+    min-width: 300px;
+    max-width: 300px;
+    margin: 0 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .supplier-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .supplier-card h3 {
+    color: #0d2d4a;
+    margin: 20px 0 10px;
+  }
+  
+  .supplier-card p {
+    color: #444;
+    font-size: 16px;
+    padding: 0 15px 20px;
+  }
+  
+  .carousel-btn {
+    background-color: #1e4770;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+  }
+  
+  .carousel-btn.left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-btn.right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-btn:hover {
+    background-color: #16375a;
+  }
+  
+  @media (max-width: 768px) {
+    .supplier-card {
+      min-width: 80%;
+    }
+  }
+
+  .blue-to-paper-wave {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background: url('../images/paperTexture.png') center/cover no-repeat;
+    background-color: #f9f9f9; /* fallback om texture inte laddas */
+}
+.blue-to-paper-wave svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.site-footer {
+    background-color: #0a2340; /* samma mörkblå som headern om du vill */
+    padding: 20px;
+    text-align: center;
+}
+
+.site-footer p {
+    color: #f7e7af; /* Din guldiga färg! */
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    margin: 0;
+    font-style: italic;
+}
+
+.weekly-catches {
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #1e4770, #0d2d4a);
+    text-align: center;
+}
+
+.weekly-catches h2 {
+    font-size: 48px;
+    color: #f7e7af;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.catch-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.catch-item {
+    background-color: #0a2340;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 22px;
+    color: #fefefe;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.catch-item:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+#catchSelect {
+    margin: 20px auto;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f7e7af;
+    color: #0d2d4a;
+    font-family: 'Merriweather', serif;
+    display: block;
+}
+
+.catch-section {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.catch-section h3 {
+    font-size: 36px;
+    color: #f7e7af;
+    margin-bottom: 20px;
+}
+
+.catch-section img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+.catch-category {
+  background: 
+    linear-gradient(rgba(58, 97, 163, 0.947), rgba(52, 85, 122, 0.897)), 
+    url('../images/paperTexture.png') center/cover no-repeat;
+  background-color: #0d2487;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  max-width: 1200px;
+}
+
+.category-card {
+  background-color: #0a2340;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+}
+
+.category-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.category-card h3 {
+  color: #f7e7af;
+  font-family: 'Merriweather', serif;
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.product-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.product-item {
+  width: 640px;
+  background-color: #1e4770;
+  color: #fefefe;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+}
+
+.product-info {
+  flex: 1;
+  min-width: 0;
+  padding-right: 10px;
+}
+
+.product-title {
+  font-size: 1.4em;
+  margin-bottom: 3px;
+  margin-top: 0;
+  color: #f7e7af;
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+  line-height: 1.2;
+}
+
+.add-to-cart {
+  background-color: #c0392b;
+  color: #ffffff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.add-to-cart:hover {
+  background-color: #e74c3c;
+  transform: scale(1.05);
+}
+
+/* Mobilanpassning */
+@media (max-width: 700px) {
+  .product-item {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .add-to-cart {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+}
+  
+  .cart-icon-small {
+    width: 16px;
+    height: auto;
+  }
+  
+  .product-quantity {
+  background-color: #1e4770;
+  color: #fefefe;
+  border: none;
+  border-bottom: 2px solid #0d2d4a;
+  border-radius: 0;
+  padding: 4px 6px;
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  width: 50px;
+  text-align: center;
+}
+
+.product-quantity:focus {
+  outline: none;
+  border-color: #f1c40f;
+  box-shadow: 0 0 4px rgba(241, 196, 15, 0.6);
+}
+  
+  
+ /* Cart section */
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #15375a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cart-table th,
+.cart-table td {
+  text-align: left;
+  padding: 10px;
+}
+
+.cart-table thead {
+  background-color: #0a2340;
+}
+
+/* Radera-knapp */
+.remove-item {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.remove-item img.delete-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Töm varukorg + Slutför köp-knappar */
+#clear-cart,
+#checkout-btn {
+  margin: 20px 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#clear-cart {
+  background-color: #7f8c8d;
+  color: white;
+}
+
+#clear-cart:hover {
+  background-color: #95a5a6;
+}
+
+#checkout-btn {
+  background-color: #27ae60;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+#checkout-btn:hover {
+  background-color: #2ecc71;
+}
+
+/* Checkoutformulär */
+#checkout-section {
+  margin-top: 80px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.checkout-form {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.checkout-form input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-family: 'Merriweather', serif;
+}
+
+.checkout-form button {
+  background-color: #c0392b;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkout-form button:hover {
+  background-color: #e74c3c;
+}
+
+/* Kvitto */
+.receipt {
+  margin-top: 40px;
+  background-color: #ffffff;
+  color: #0d2d4a;
+  padding: 25px;
+  border-radius: 8px;
+  font-family: 'Merriweather', serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.receipt ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.receipt li {
+  margin-bottom: 6px;
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.cart-wrapper {
+  background-color: #1e4770;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 100%;
+  color: #fefefe;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.cart-wrapper h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#checkout-section {
+  margin-top: 80px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+#refresh-status {
+  background-color: #15375a;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#refresh-status:hover {
+  background-color: #1e4770; /* valfri ljusare blå för hover-effekt */
+}
+
+
+.checkout-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+/* Varukorg counter */
+.cart-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #c0392b;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cart-link:hover {
+  background-color: #e74c3c;
+  transform: scale(1.05);
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #f7e7af;
+  color: #c0392b;
+  font-size: 0.7em;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 18px;
+  text-align: center;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  display: none; /* visas bara om > 0 */
+}
+
+.cart-qty {
+  background-color: #15375a; 
+  color: #fefefe;
+  border: none;
+  border-bottom: 2px solid #0d2d4a;
+  border-radius: 0;
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  width: 60px;
+  text-align: center;
+}
+
+
+
+
+/* Filter på plats */
+.pickup-filter-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.pickup-label {
+  font-size: 1rem;
+  color: #fefefe;
+}
+
+.pickup-select {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #0d2d4a;
+  color: #ffffff;
+  font-family: 'Merriweather', serif;
+}
+
+/* Knapp för att gå tillbaka till produkter*/
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #0d2745; /* mörkblå grundfärg */
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  color: #ffffff; /* vit text */
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Merriweather', serif;
+  transition: background-color 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background-color: #143554; /* ljusare blå vid hover */
+  color: #ffffff;
+}
+
+.icon-back {
+  width: 18px;
+  height: 18px;
+  filter: none; /* behåll vit ikon alltid */
+}
+
+.pickup-filter-wrapper {
+  margin-right: 2rem; /* flyttar in dropdownen från kanten */
+}
+
+*/ About section */
+
+.about-stats-text {
+  margin-top: 1em;
+  line-height: 1.6;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.about-stats-box {
+  background-color: #0f2641; /* din bildfärg */
+  padding: 1.5em;
+  margin-top: 8em;
+  border-radius: 12px;
+  color: white;
+  font-family: 'Merriweather', serif;
+  max-width: 300px;
+  margin-right: 10em;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.about-stats-box strong {
+  color: #f7e7af;
+  font-weight: bold;
+}
+
+.about-layout .about-content {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-left: 0;         /* Ta bort centrerad placering */
+  padding-left: 0rem;     /* Tryck in hela innehållet från vänster */
+}
+
+.hero-text .about-description {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #ffffff; /* om färgen inte syns pga bakgrunden */
+}
+
+.stats-heading {
+  margin-top: 0;
+  font-size: 1.3em;
+  color: #f7e7af;
+  margin-bottom: 0.8em;
+}
+
+.about-heading {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 28px;
+}
+
+
+
+

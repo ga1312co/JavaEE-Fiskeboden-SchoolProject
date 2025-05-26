@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiskeboden</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/fiskebod_logo.png" alt="Fiskeboden Logotyp" />
+    </a>
+  </div>
+  <nav>
+    <a href="about.html">OM OSS</a>
+    <a href="products.html">PRODUKTER</a>
+<a href="cart.html" class="cart-link">
+  <img src="images/shoppingCart.png" class="cart-icon" />
+  VARUKORG
+  <span id="cart-count" class="cart-count">0</span>
+</a>
+  </nav>
+</header>
+
+<div class="wave-top">
+  <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+    <path d="M0.00,49.98 C150.00,150.00 349.77,-50.00 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #1e4770;"></path>
+  </svg>
+</div>
+
+<section class="weekly-catches">
+
+  <div class="catches-header">
+    <div class="pickup-filter-wrapper">
+      <select id="pickupSelect" class="pickup-select">
+        <option value="">Alla utlämningsställen</option>
+        <!-- Dynamiskt fyllt med JS -->
+      </select>
+    </div>
+    <h2 id ="weekly-header">Veckans fångster - Vecka 22</h2>
+  </div>
+  
+
+  <p class="catch-description">
+    Välj en kategori för att hoppa direkt till rätt avdelning på sidan!
+  </p>
+
+  <select id="catchSelect">
+    <option value="sotvatten">Sötvattenfisk</option>
+    <option value="saltvatten">Saltvattenfisk</option>
+    <option value="rokt">Rökt fisk</option>
+    <option value="konserverad">Konserverad fisk</option>
+    <option value="skaldjur">Skaldjur</option>
+    <option value="fiskrom">Fiskrom</option>
+  </select>
+
+  <!-- Kategorikort + tom produktlistor som fylls via JS -->
+  <div class="catch-category" id="sotvatten">
+    <div class="category-card">
+      <img src="images/freshWaterFish.png" alt="Sötvattenfisk">
+      <h3>Sötvattenfisk</h3>
+    </div>
+    <div class="product-list"></div>
+  </div>
+
+  <div class="catch-category" id="saltvatten">
+    <div class="category-card">
+      <img src="images/saltWaterFish.png" alt="Saltvattenfisk">
+      <h3>Saltvattenfisk</h3>
+    </div>
+    <div class="product-list"></div>
+  </div>
+
+  <div class="catch-category" id="rokt">
+    <div class="category-card">
+      <img src="images/smokedFish.png" alt="Rökt fisk">
+      <h3>Rökt fisk</h3>
+    </div>
+    <div class="product-list"></div>
+  </div>
+
+  <div class="catch-category" id="konserverad">
+    <div class="category-card">
+      <img src="images/cannedFish.png" alt="Konserverad fisk">
+      <h3>Konserverad fisk</h3>
+    </div>
+    <div class="product-list"></div>
+  </div>
+
+  <div class="catch-category" id="skaldjur">
+    <div class="category-card">
+      <img src="images/shellFish.png" alt="Skaldjur">
+      <h3>Skaldjur</h3>
+    </div>
+    <div class="product-list"></div>
+  </div>
+
+  <div class="catch-category" id="fiskrom">
+    <div class="category-card">
+      <img src="images/fishRoe.png" alt="Fiskrom">
+      <h3>Fiskrom</h3>
+    </div>
+    <div class="product-list"></div>
+  </div>
+</section>
+
+<div class="wave">
+  <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+    <path d="M0.00,49.98 C150.00,150.00 349.77,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #1e4770;"></path>
+  </svg>
+</div>
+
+<footer class="site-footer">
+  <p style="font-size: 0.8em;">© 2025 Surströmming Solutions</p>
+</footer>
+
+</body>
+</html>
